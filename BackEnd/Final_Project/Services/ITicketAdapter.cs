@@ -6,5 +6,6 @@ namespace Final_Project.Services
     public interface ITicketAdapter
     {
         public GetTicketDTO Bind(Ticket ticket);
+        public Ticket Bind(CreateTicketDTO ticket);
     }
 }

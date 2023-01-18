@@ -18,10 +18,12 @@ namespace Final_Project.Repositories
             return _db.Tickets;
         }
 
-        public void Create(Ticket entity)
+        public int Create(Ticket entity)
         {
             _db.Tickets.Add(entity);
             _db.SaveChanges();
+
+            return entity.TicketId;
         }
 
         public bool Exist(int id)

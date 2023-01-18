@@ -45,15 +45,15 @@ namespace Final_Project.Controllers
         /// </summary>
         /// <param name="ticketId"></param>
         /// <returns></returns>
-        [HttpGet("{id}", Name ="GetTicketById")]
+        [HttpGet("{id}", Name = "GetTicketById")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetTicketDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
-        public IActionResult GetTicketById(int ticketId)
+        public IActionResult GetTicketById(int id)
         {
-            var ticket = _ticketRepo.Get(ticketId);
+            var ticket = _ticketRepo.Get(id);
             var model = _adapter.Bind(ticket);
 
             return Ok(model);
@@ -69,23 +69,13 @@ namespace Final_Project.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
-        public ActionResult<CreateTicketDTO> PostTicket(CreateTicketDTO ticketDTO)
+        public ActionResult PostTicket(CreateTicketDTO ticketDTO)
         {
-            if (ticketDTO == null)
-            {
-                return BadRequest();
-            }
 
-            Ticket newTicket = new()
-            {
-                Description = ticketDTO.Description,
-                // CreateDateTime = ticketDTO.CreateDateTime,
-        };
+            var model = _adapter.Bind(ticketDTO);
+            var id = _ticketRepo.Create(model);
 
-            // _ticketRepo.Tickets.Add(newTicket);
-            // _db.SaveChanges();
-
-            return CreatedAtRoute("GetTicketById", new { id = newTicket.TicketId }, ticketDTO);
+            return Created("PostTicket", new { Id = id });
         }
     }
 }

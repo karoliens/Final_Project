@@ -6,7 +6,7 @@ namespace Final_Project.Repositories.IRepositories
     {
         public IEnumerable<TEntity> All();
         public TEntity Get(int id);
-        public void Create(TEntity entity);
+        public int Create(TEntity entity);
         public void Save();
         public bool Exist(int id);
     }

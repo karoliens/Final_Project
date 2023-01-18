@@ -19,5 +19,19 @@ namespace Final_Project.Services
                 Description = ticket.Description,
             };
         }
+
+        public Ticket Bind(CreateTicketDTO ticket)
+        {
+            return new Ticket
+            {
+                ClientName = ticket.ClientName,
+                ClientEmail = ticket.ClientEmail,
+                ClientPhoneNumber = ticket.ClientPhoneNumber,
+                CreateDateTime = DateTime.Now,
+                // TypeOfDevice = (ETypeOfDevice)Enum.Parse(typeof(ETypeOfDevice), ticket.TypeOfDevice),
+                // TypeOfService = (ETypeOfService)Enum.Parse(typeof(ETypeOfService), ticket.TypeOfService),
+                Description = ticket.Description,
+            };
+        }
     }
 }
