@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prisijungimas | elfix.lt</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <main class="container main-class">
+      <header class="main-header">
+        <h1 class="header-h1">elfix.lt</h1>
+        <nav>
+          <a href="./index.html">Pradinis</a>
+          <a href="./menu.html">Menu</a>
+          <a href="./login.html">Registracija</a>
+          <a href="./login.html" class="active">Prisijungimas</a>
+        </nav>
+      </header>
+      <article>
+        <h2>elfix.lt Vartotojo Prisijungimas</h2>
+        <p class="error-message"></p>
+        <form id="login-form">
+          <label for="username">Naudotojo vardas</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Naudotojo vardas"
+          /><br /><br />
+          <label for="password">Slaptažodis</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Slaptažodis"
+          /><br /><br />
+          <input type="button" id="login-form-submit" value="Prisijungti" />
+        </form>
+      </article>
+    </main>
+    <script src="js/app-login.js"></script>
+  </body>
+</html>

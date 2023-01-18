@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siųsti Užklausą | elfix.lt</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <form id="new-ticket-form">
+      <h1>Siųsti įrenginį remontui</h1>
+      <p>Užpildykite žemiau pateiktą formą</p>
+      <label id="name-label" for="name">Vardas</label>
+      <input
+        id="name"
+        name="name"
+        placeholder="Įveskite vardą"
+        required
+      /><br />
+      <label id="email-label" for="email">Elektroninio pašto adresas</label>
+      <input
+        id="email"
+        name="email"
+        placeholder="Įveskite el. pašto adresą"
+        required
+      /><br />
+      <label id="phone-number-label" for="phone-number">Telefono numeris</label>
+      <input
+        id="phone-number"
+        name="phone-number"
+        placeholder="Įveskite telefono numerį"
+        min="0"
+        max="9"
+      /><br />
+      <!--<label for="dropdown">Pasirinkite įrenginį</label>
+      <select id="dropdown" placeholder="Pasirinkite įrenginį">
+        <option value="iphone">iPhone</option>
+        <option value="macbook">iPad</option>
+        <option value="ipad">MacBook</option>
+        <option value="android">Android</option>
+        <option value="kita">Kita</option></select
+      ><br />
+      <label for="">Remontas ar duomenų ištraukimas?</label><br />
+      <label for="remontas">
+        <input
+          id="remontas"
+          type="radio"
+          value="Remontas"
+          name="radio"
+        />Remontas
+      </label>
+      <label for="duomenu_istraukimas">
+        <input
+          id="duomenu_istraukimas"
+          type="radio"
+          value="Duomenų ištraukimas"
+          name="radio"
+        />Duomenų ištraukimas
+      </label>
+      <textarea
+        id="textbox"
+        rows="10"
+        cols="40"
+        placeholder="Apibūdinkite gedimą"
+      ></textarea
+      ><br /><br />-->
+
+      <input id="ticket-submit-button" type="submit" value="Siųsti" />
+    </form>
+    <script src="js/ticket-form.js"></script>
+  </body>
+</html>
