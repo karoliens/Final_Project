@@ -9,13 +9,6 @@ namespace Final_Project.Dto
         {
         }
 
-        public CreateClientDTO(Client client)
-        {
-            Name = client.Name;
-            Email = client.Email;
-            PhoneNumber = client.PhoneNumber;
-        }
-
         /// <summary>
         /// Kliento vardas
         /// </summary>

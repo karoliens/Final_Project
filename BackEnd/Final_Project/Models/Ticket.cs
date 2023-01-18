@@ -10,24 +10,22 @@ namespace Final_Project.Models
         {
         }
 
-        public Ticket(int? ticketId, string description, DateTime createDateTime, int? clientId, int? technicianId, int? deviceId, int? repairCategoryId)
-        {
-            TicketId = ticketId;
-            Description = description;
-            CreateDateTime = createDateTime;
-            ClientId = clientId;
-            TechnicianId = technicianId;
-            DeviceId = deviceId;
-            RepairCategoryId = repairCategoryId;
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int? TicketId { get; set; }
-        [Required]
-        public string Description { get; set; }
+        public int TicketId { get; set; }
+        public string ClientName { get; set; }
+        public string ClientEmail { get; set; }
+        public string ClientPhoneNumber { get; set; }
         public DateTime CreateDateTime { get; set; }
-        public Client? Client { get; set; }
+        public ETypeOfDevice TypeOfDevice { get; set; }
+        public ETypeOfService TypeOfService { get; set; }
+        public string Description { get; set; }
+
+
+
+
+        /*
+        public Ticket? Client { get; set; }
         public int? ClientId { get; set; }
         public List<RepairCategory> RepairCategories { get; set; }
         public int? RepairCategoryId { get; set; }
@@ -35,5 +33,6 @@ namespace Final_Project.Models
         public int? TechnicianId { get; set; }
         public Device? Device { get; set; }
         public int? DeviceId { get; set; }
+        */
     }
 }

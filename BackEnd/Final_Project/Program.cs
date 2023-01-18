@@ -1,6 +1,8 @@
 using Final_Project.Data;
+using Final_Project.Models;
 using Final_Project.Repositories;
 using Final_Project.Repositories.IRepositories;
+using Final_Project.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -19,7 +21,8 @@ namespace Final_Project
             {
                 option.UseSqlite(builder.Configuration.GetConnectionString("RepairShopConnectionString"));
             });
-            builder.Services.AddScoped<IClientRepository, ClientRepository>();
+            builder.Services.AddTransient<IRepository<Ticket>, TicketRepository>();
+            builder.Services.AddTransient<ITicketAdapter, TicketAdapter>();
             builder.Services.AddControllers()
                 .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
