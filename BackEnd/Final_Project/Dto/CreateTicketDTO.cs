@@ -9,17 +9,17 @@ namespace Final_Project.Dto
         }
 
         /// <summary>
-        /// Kliento vardas
+        /// Client name
         /// </summary>
         public string ClientName { get; set; }
 
         /// <summary>
-        /// Kliento el. pašto adresas
+        /// Client email
         /// </summary>
         public string ClientEmail { get; set; }
 
         /// <summary>
-        /// Kliento telefono numeris
+        /// Client phone number
         /// </summary>
         public string ClientPhoneNumber { get; set; }
 
@@ -34,7 +34,7 @@ namespace Final_Project.Dto
         // public string TypeOfService { get; set; }
 
         /// <summary>
-        /// Gedimo apibūdinimas
+        /// Description of the problem
         /// </summary>
         public string Description { get; set; }
     }

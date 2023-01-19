@@ -14,8 +14,8 @@ namespace Final_Project.Services
                 ClientName = ticket.ClientName,
                 ClientEmail = ticket.ClientEmail,
                 ClientPhoneNumber = ticket.ClientPhoneNumber,
-                TypeOfDevice = ticket.TypeOfDevice.ToString(),
-                TypeOfService = ticket.TypeOfService.ToString(),
+                // TypeOfDevice = ticket.TypeOfDevice.ToString(),
+                // TypeOfService = ticket.TypeOfService.ToString(),
                 Description = ticket.Description,
             };
         }

@@ -27,7 +27,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Gaunami visi Ticket įrašai, esantys duomenų bazėje
+        /// Fetches all Ticket entries in the db
         /// </summary>
         /// <returns></returns>
         [HttpGet("tickets", Name = "GetAllTickets")]
@@ -43,7 +43,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Pagal ID gaunamas Ticket, esantis duomenų bazėje
+        /// Fetches entry of Ticket with specific ID in the db
         /// </summary>
         /// <param name="ticketId"></param>
         /// <returns></returns>
@@ -65,6 +65,7 @@ namespace Final_Project.Controllers
                 _logger.LogInformation("Ticket with ID {id} not found", id);
                 return NotFound();
             }
+
             var ticket = _ticketRepo.Get(id);
             var model = _adapter.Bind(ticket);
 
@@ -81,9 +82,14 @@ namespace Final_Project.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
-        public ActionResult PostTicket(CreateTicketDTO ticketDTO)
+        public IActionResult PostTicket(CreateTicketDTO ticketDTO)
         {
-
+            if (ticketDTO.ClientName == "" || ticketDTO.ClientEmail == "" || ticketDTO.ClientPhoneNumber == "")
+            {
+                _logger.LogInformation("At least one of the Ticket properties is missing");
+                return BadRequest();
+            }
+             
             var model = _adapter.Bind(ticketDTO);
             var id = _ticketRepo.Create(model);
 

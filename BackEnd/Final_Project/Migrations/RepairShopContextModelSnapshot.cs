@@ -25,14 +25,17 @@ namespace FinalProject.Migrations
 
                     b.Property<string>("ClientEmail")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ClientName")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ClientPhoneNumber")
                         .IsRequired()
+                        .HasMaxLength(9)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreateDateTime")
@@ -40,6 +43,7 @@ namespace FinalProject.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasMaxLength(150)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TypeOfDevice")
@@ -61,7 +65,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "karoliens@gmail.com",
                             ClientName = "Karolis",
                             ClientPhoneNumber = "+37061212121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 713, DateTimeKind.Local).AddTicks(2358),
+                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 87, DateTimeKind.Local).AddTicks(8139),
                             Description = "Reikia pakeisti iPhone 7 ekraną",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -72,7 +76,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "ievuzis@gmail.com",
                             ClientName = "Ieva",
                             ClientPhoneNumber = "+37061252121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1648),
+                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6182),
                             Description = "Reikia pakeisti iPhone X bateriją",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -83,7 +87,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "tomukas@gmail.com",
                             ClientName = "Tomas",
                             ClientPhoneNumber = "+37061212128",
-                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1668),
+                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6200),
                             Description = "Reikia pakeisti SAMSUNG S20 ekraną",
                             TypeOfDevice = "Android",
                             TypeOfService = "Repair"
@@ -94,7 +98,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "sauliens@gmail.com",
                             ClientName = "Saulius",
                             ClientPhoneNumber = "+37061215121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1671),
+                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6202),
                             Description = "Reikia perlituoti PS5 pultelio krovimo lizdą",
                             TypeOfDevice = "Other",
                             TypeOfService = "Repair"

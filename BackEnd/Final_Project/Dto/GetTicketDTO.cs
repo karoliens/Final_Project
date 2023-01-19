@@ -1,4 +1,5 @@
 ﻿using Final_Project.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Final_Project.Dto
 {
@@ -9,37 +10,37 @@ namespace Final_Project.Dto
         }
 
         /// <summary>
-        /// Kliento ID
+        /// Client ID
         /// </summary>
         public int TicketId { get; set; }
 
         /// <summary>
-        /// Kliento vardas
+        /// Client name
         /// </summary>
         public string ClientName { get; set; }
 
         /// <summary>
-        /// Kliento el. pašto adresas
+        /// Cleint email
         /// </summary>
         public string ClientEmail { get; set; }
 
         /// <summary>
-        /// Kliento telefono numeris
+        /// Client phone number
         /// </summary>
         public string ClientPhoneNumber { get; set; }
 
         /// <summary>
         /// Įrenginio tipas. Galimos reikšmės iPhone, iPad, Android, Other
         /// </summary>
-        public string TypeOfDevice { get; set; }
+        // public string TypeOfDevice { get; set; }
 
         /// <summary>
         /// Paslaugos tipas. Galimos reikšmės Repair ir DataRecovery
         /// </summary>
-        public string TypeOfService { get; set; }
+        // public string TypeOfService { get; set; }
 
         /// <summary>
-        /// Gedimo apibūdinimas
+        /// Description of the problem
         /// </summary>
         public string Description { get; set; }
         
