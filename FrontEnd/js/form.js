@@ -1,7 +1,7 @@
 const registrationForm = document.querySelector("#new-ticket-form");
 const registrationFormSbmBtn = document.querySelector("#ticket-submit-button");
 
-const url = "https://localhost:7118/api/Client/clients";
+const url = "https://localhost:7118/api/Ticket/tickets";
 
 function sendData() {
   let data = new FormData(registrationForm);
@@ -16,7 +16,7 @@ function sendData() {
   console.log(obj);
 
   
-  fetch("https://localhost:7118/api/Client/clients", {
+  fetch("https://localhost:7118/api/Ticket/tickets", {
     method: "post",
     headers: {
       "Accept": "application/json",
@@ -29,7 +29,7 @@ function sendData() {
     
 }
 
-registrationFormSbmBtn.addEventListener("click", (e) => {
+registrationFormSbmBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData();
 });
