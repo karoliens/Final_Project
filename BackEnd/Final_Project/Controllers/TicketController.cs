@@ -45,7 +45,6 @@ namespace Final_Project.Controllers
         /// <summary>
         /// Fetches entry of Ticket with specific ID in the db
         /// </summary>
-        /// <param name="ticketId"></param>
         /// <returns></returns>
         [HttpGet("{id}", Name = "GetTicketById")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetTicketDTO))]
