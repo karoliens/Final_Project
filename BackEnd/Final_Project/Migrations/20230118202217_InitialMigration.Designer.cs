@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProject.Migrations
 {
     [DbContext(typeof(RepairShopContext))]
-    [Migration("20230118121310_InitialMigration")]
+    [Migration("20230118202217_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -64,7 +64,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "karoliens@gmail.com",
                             ClientName = "Karolis",
                             ClientPhoneNumber = "+37061212121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 14, 13, 10, 375, DateTimeKind.Local).AddTicks(8491),
+                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 713, DateTimeKind.Local).AddTicks(2358),
                             Description = "Reikia pakeisti iPhone 7 ekraną",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -75,7 +75,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "ievuzis@gmail.com",
                             ClientName = "Ieva",
                             ClientPhoneNumber = "+37061252121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6716),
+                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1648),
                             Description = "Reikia pakeisti iPhone X bateriją",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -86,7 +86,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "tomukas@gmail.com",
                             ClientName = "Tomas",
                             ClientPhoneNumber = "+37061212128",
-                            CreateDateTime = new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6736),
+                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1668),
                             Description = "Reikia pakeisti SAMSUNG S20 ekraną",
                             TypeOfDevice = "Android",
                             TypeOfService = "Repair"
@@ -97,7 +97,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "sauliens@gmail.com",
                             ClientName = "Saulius",
                             ClientPhoneNumber = "+37061215121",
-                            CreateDateTime = new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6739),
+                            CreateDateTime = new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1671),
                             Description = "Reikia perlituoti PS5 pultelio krovimo lizdą",
                             TypeOfDevice = "Other",
                             TypeOfService = "Repair"

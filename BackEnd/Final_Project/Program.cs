@@ -21,10 +21,12 @@ namespace Final_Project
             {
                 option.UseSqlite(builder.Configuration.GetConnectionString("RepairShopConnectionString"));
             });
-            builder.Services.AddTransient<IRepository<Ticket>, TicketRepository>();
+            builder.Services.AddTransient<ITicketRepository, TicketRepository>();
             builder.Services.AddTransient<ITicketAdapter, TicketAdapter>();
+            
             builder.Services.AddControllers()
                 .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(option =>
@@ -51,8 +53,6 @@ namespace Final_Project
             }
 
             app.UseCors("CorsForRepairShop");
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

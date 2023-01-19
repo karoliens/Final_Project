@@ -37,10 +37,10 @@ namespace FinalProject.Migrations
                 columns: new[] { "TicketId", "ClientEmail", "ClientName", "ClientPhoneNumber", "CreateDateTime", "Description", "TypeOfDevice", "TypeOfService" },
                 values: new object[,]
                 {
-                    { 1, "karoliens@gmail.com", "Karolis", "+37061212121", new DateTime(2023, 1, 18, 14, 13, 10, 375, DateTimeKind.Local).AddTicks(8491), "Reikia pakeisti iPhone 7 ekraną", "iPhone", "Repair" },
-                    { 2, "ievuzis@gmail.com", "Ieva", "+37061252121", new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6716), "Reikia pakeisti iPhone X bateriją", "iPhone", "Repair" },
-                    { 3, "tomukas@gmail.com", "Tomas", "+37061212128", new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6736), "Reikia pakeisti SAMSUNG S20 ekraną", "Android", "Repair" },
-                    { 4, "sauliens@gmail.com", "Saulius", "+37061215121", new DateTime(2023, 1, 18, 14, 13, 10, 377, DateTimeKind.Local).AddTicks(6739), "Reikia perlituoti PS5 pultelio krovimo lizdą", "Other", "Repair" }
+                    { 1, "karoliens@gmail.com", "Karolis", "+37061212121", new DateTime(2023, 1, 18, 22, 22, 16, 713, DateTimeKind.Local).AddTicks(2358), "Reikia pakeisti iPhone 7 ekraną", "iPhone", "Repair" },
+                    { 2, "ievuzis@gmail.com", "Ieva", "+37061252121", new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1648), "Reikia pakeisti iPhone X bateriją", "iPhone", "Repair" },
+                    { 3, "tomukas@gmail.com", "Tomas", "+37061212128", new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1668), "Reikia pakeisti SAMSUNG S20 ekraną", "Android", "Repair" },
+                    { 4, "sauliens@gmail.com", "Saulius", "+37061215121", new DateTime(2023, 1, 18, 22, 22, 16, 715, DateTimeKind.Local).AddTicks(1671), "Reikia perlituoti PS5 pultelio krovimo lizdą", "Other", "Repair" }
                 });
         }
 

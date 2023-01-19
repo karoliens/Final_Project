@@ -4,7 +4,7 @@ using Final_Project.Repositories.IRepositories;
 
 namespace Final_Project.Repositories
 {
-    public class TicketRepository : IRepository<Ticket>
+    public class TicketRepository : ITicketRepository
     {
         private readonly RepairShopContext _db;
 
@@ -34,11 +34,6 @@ namespace Final_Project.Repositories
         public Ticket Get(int id)
         {
             return _db.Tickets.Find(id);
-        }
-
-        public void Save()
-        {
-            throw new NotImplementedException();
         }
     }
 }

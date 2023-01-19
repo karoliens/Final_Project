@@ -15,11 +15,13 @@ namespace Final_Project.Controllers
     [ApiController]
     public class TicketController : ControllerBase
     {
-        private readonly IRepository<Ticket> _ticketRepo;
+        private readonly ILogger<TicketController> _logger;
+        private readonly ITicketRepository _ticketRepo;
         private readonly ITicketAdapter _adapter;
 
-        public TicketController(IRepository<Ticket> ticketRepo, ITicketAdapter adapter)
+        public TicketController(ILogger<TicketController> logger, ITicketRepository ticketRepo, ITicketAdapter adapter)
         {
+            _logger = logger;
             _ticketRepo = ticketRepo;
             _adapter = adapter;
         }
@@ -53,6 +55,16 @@ namespace Final_Project.Controllers
         [Produces(MediaTypeNames.Application.Json)]
         public IActionResult GetTicketById(int id)
         {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+
+            if (!_ticketRepo.Exist(id))
+            {
+                _logger.LogInformation("Ticket with ID {id} not found", id);
+                return NotFound();
+            }
             var ticket = _ticketRepo.Get(id);
             var model = _adapter.Bind(ticket);
 
@@ -75,7 +87,7 @@ namespace Final_Project.Controllers
             var model = _adapter.Bind(ticketDTO);
             var id = _ticketRepo.Create(model);
 
-            return Created("PostTicket", new { Id = id });
+            return Created("GetTicketById", new { Id = id });
         }
     }
 }

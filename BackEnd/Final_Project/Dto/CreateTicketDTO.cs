@@ -9,11 +9,6 @@ namespace Final_Project.Dto
         }
 
         /// <summary>
-        /// Kliento ID
-        /// </summary>
-        public int ClientId { get; set; }
-
-        /// <summary>
         /// Kliento vardas
         /// </summary>
         public string ClientName { get; set; }
@@ -31,12 +26,12 @@ namespace Final_Project.Dto
         /// <summary>
         /// Įrenginio tipas. Galimos reikšmės iPhone, iPad, Android, Other
         /// </summary>
-        public string TypeOfDevice { get; set; }
+        // public string TypeOfDevice { get; set; }
 
         /// <summary>
         /// Paslaugos tipas. Galimos reikšmės Repair ir DataRecovery
         /// </summary>
-        public string TypeOfService { get; set; }
+        // public string TypeOfService { get; set; }
 
         /// <summary>
         /// Gedimo apibūdinimas
