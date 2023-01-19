@@ -10,7 +10,7 @@ namespace Final_Project.Dto
         }
 
         /// <summary>
-        /// Client ID
+        /// Ticket ID
         /// </summary>
         public int TicketId { get; set; }
 
