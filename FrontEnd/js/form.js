@@ -27,4 +27,5 @@ function sendData() {
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData();
+  registrationForm.reset();
 });
