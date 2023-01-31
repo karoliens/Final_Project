@@ -2,7 +2,7 @@
 using Final_Project.Dto;
 using Final_Project.Models;
 using Final_Project.Repositories.IRepositories;
-using Final_Project.Services;
+using Final_Project.Services.Adapters.IAdapters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Mime;
@@ -27,7 +27,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Fetches all Ticket entries in the db
+        /// Gets all Tickets from the database.
         /// </summary>
         /// <returns></returns>
         [HttpGet("tickets", Name = "GetAllTickets")]
@@ -43,7 +43,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Fetches entry of Ticket with specific ID in the db
+        /// Gets Ticket by ID from database.
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}", Name = "GetTicketById")]
@@ -72,7 +72,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Ticket įrašomas į duomenų bazę
+        /// Posts Ticket to the database.
         /// </summary>
         /// <returns></returns>
         [HttpPost("tickets", Name = "PostTicket")]
@@ -83,7 +83,7 @@ namespace Final_Project.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         public IActionResult PostTicket(CreateTicketDTO ticketDTO)
         {
-            if (ticketDTO.ClientName == "" || ticketDTO.ClientEmail == "" || ticketDTO.ClientPhoneNumber == "")
+            if (ticketDTO.ClientName == "" || ticketDTO.ClientEmail == "" || ticketDTO.ClientPhoneNumber == "" || ticketDTO.Description == "")
             {
                 _logger.LogInformation("At least one of the Ticket properties is missing");
                 return BadRequest();

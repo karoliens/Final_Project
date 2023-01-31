@@ -3,6 +3,7 @@ using Final_Project.Models;
 using Final_Project.Repositories;
 using Final_Project.Repositories.IRepositories;
 using Final_Project.Services;
+using Final_Project.Services.Adapters.IAdapters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;

@@ -1,7 +1,7 @@
 ﻿using Final_Project.Dto;
 using Final_Project.Models;
 
-namespace Final_Project.Services
+namespace Final_Project.Services.Adapters.IAdapters
 {
     public interface ITicketAdapter
     {

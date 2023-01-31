@@ -7,15 +7,10 @@ function sendData() {
   let data = new FormData(registrationForm);
   let obj = {};
 
-  console.log(data);
-
   data.forEach((value, key) => {
     obj[key] = value;
   });
 
-  console.log(obj);
-
-  
   fetch("https://localhost:7118/api/Ticket/tickets", {
     method: "post",
     headers: {
@@ -29,7 +24,7 @@ function sendData() {
     
 }
 
-registrationFormSbmBtn.addEventListener("submit", (e) => {
+registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData();
 });

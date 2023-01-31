@@ -65,7 +65,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "karoliens@gmail.com",
                             ClientName = "Karolis",
                             ClientPhoneNumber = "+37061212121",
-                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 87, DateTimeKind.Local).AddTicks(8139),
+                            CreateDateTime = new DateTime(2023, 1, 31, 13, 2, 3, 970, DateTimeKind.Local).AddTicks(1619),
                             Description = "Reikia pakeisti iPhone 7 ekraną",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -76,7 +76,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "ievuzis@gmail.com",
                             ClientName = "Ieva",
                             ClientPhoneNumber = "+37061252121",
-                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6182),
+                            CreateDateTime = new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5913),
                             Description = "Reikia pakeisti iPhone X bateriją",
                             TypeOfDevice = "iPhone",
                             TypeOfService = "Repair"
@@ -87,7 +87,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "tomukas@gmail.com",
                             ClientName = "Tomas",
                             ClientPhoneNumber = "+37061212128",
-                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6200),
+                            CreateDateTime = new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5946),
                             Description = "Reikia pakeisti SAMSUNG S20 ekraną",
                             TypeOfDevice = "Android",
                             TypeOfService = "Repair"
@@ -98,7 +98,7 @@ namespace FinalProject.Migrations
                             ClientEmail = "sauliens@gmail.com",
                             ClientName = "Saulius",
                             ClientPhoneNumber = "+37061215121",
-                            CreateDateTime = new DateTime(2023, 1, 19, 12, 55, 16, 89, DateTimeKind.Local).AddTicks(6202),
+                            CreateDateTime = new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5951),
                             Description = "Reikia perlituoti PS5 pultelio krovimo lizdą",
                             TypeOfDevice = "Other",
                             TypeOfService = "Repair"
