@@ -13,16 +13,12 @@ namespace Final_Project.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TicketId { get; set; }
-        [MaxLength(50)]
         public string ClientName { get; set; }
-        [MaxLength(50)]
         public string ClientEmail { get; set; }
-        [MaxLength(9)]
         public string ClientPhoneNumber { get; set; }
         public DateTime CreateDateTime { get; set; }
         public ETypeOfDevice TypeOfDevice { get; set; }
         public ETypeOfService TypeOfService { get; set; }
-        [MaxLength(150)]
         public string Description { get; set; }
 
 

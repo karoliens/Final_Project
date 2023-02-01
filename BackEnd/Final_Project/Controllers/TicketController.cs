@@ -31,7 +31,7 @@ namespace Final_Project.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("tickets", Name = "GetAllTickets")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetClientDTO>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetTicketDTO>))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         public IActionResult GetAllTickets()
@@ -43,7 +43,7 @@ namespace Final_Project.Controllers
         }
 
         /// <summary>
-        /// Gets Ticket by ID from database.
+        /// Gets Ticket by ID from the database.
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}", Name = "GetTicketById")]

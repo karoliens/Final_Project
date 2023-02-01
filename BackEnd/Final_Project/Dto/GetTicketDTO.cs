@@ -20,7 +20,7 @@ namespace Final_Project.Dto
         public string ClientName { get; set; }
 
         /// <summary>
-        /// Cleint email
+        /// Client email
         /// </summary>
         public string ClientEmail { get; set; }
 
