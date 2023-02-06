@@ -19,13 +19,13 @@ namespace FinalProject.Migrations
                 {
                     TicketId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ClientName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    ClientEmail = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    ClientPhoneNumber = table.Column<string>(type: "TEXT", maxLength: 9, nullable: false),
+                    ClientName = table.Column<string>(type: "TEXT", nullable: false),
+                    ClientEmail = table.Column<string>(type: "TEXT", nullable: false),
+                    ClientPhoneNumber = table.Column<string>(type: "TEXT", nullable: false),
                     CreateDateTime = table.Column<DateTime>(type: "TEXT", nullable: false),
                     TypeOfDevice = table.Column<string>(type: "TEXT", nullable: false),
                     TypeOfService = table.Column<string>(type: "TEXT", nullable: false),
-                    Description = table.Column<string>(type: "TEXT", maxLength: 150, nullable: false)
+                    Description = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -37,10 +37,10 @@ namespace FinalProject.Migrations
                 columns: new[] { "TicketId", "ClientEmail", "ClientName", "ClientPhoneNumber", "CreateDateTime", "Description", "TypeOfDevice", "TypeOfService" },
                 values: new object[,]
                 {
-                    { 1, "karoliens@gmail.com", "Karolis", "+37061212121", new DateTime(2023, 1, 31, 13, 2, 3, 970, DateTimeKind.Local).AddTicks(1619), "Reikia pakeisti iPhone 7 ekraną", "iPhone", "Repair" },
-                    { 2, "ievuzis@gmail.com", "Ieva", "+37061252121", new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5913), "Reikia pakeisti iPhone X bateriją", "iPhone", "Repair" },
-                    { 3, "tomukas@gmail.com", "Tomas", "+37061212128", new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5946), "Reikia pakeisti SAMSUNG S20 ekraną", "Android", "Repair" },
-                    { 4, "sauliens@gmail.com", "Saulius", "+37061215121", new DateTime(2023, 1, 31, 13, 2, 3, 973, DateTimeKind.Local).AddTicks(5951), "Reikia perlituoti PS5 pultelio krovimo lizdą", "Other", "Repair" }
+                    { 1, "karoliens@gmail.com", "Karolis", "+37061212121", new DateTime(2023, 2, 6, 19, 33, 5, 730, DateTimeKind.Local).AddTicks(3923), "Reikia pakeisti iPhone 7 ekraną", "iPhone", "Repair" },
+                    { 2, "ievuzis@gmail.com", "Ieva", "+37061252121", new DateTime(2023, 2, 6, 19, 33, 5, 734, DateTimeKind.Local).AddTicks(546), "Reikia pakeisti iPhone X bateriją", "iPhone", "Repair" },
+                    { 3, "tomukas@gmail.com", "Tomas", "+37061212128", new DateTime(2023, 2, 6, 19, 33, 5, 734, DateTimeKind.Local).AddTicks(579), "Reikia pakeisti SAMSUNG S20 ekraną", "Android", "Repair" },
+                    { 4, "sauliens@gmail.com", "Saulius", "+37061215121", new DateTime(2023, 2, 6, 19, 33, 5, 734, DateTimeKind.Local).AddTicks(584), "Reikia perlituoti PS5 pultelio krovimo lizdą", "Other", "Repair" }
                 });
         }
 

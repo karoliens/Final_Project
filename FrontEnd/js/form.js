@@ -21,11 +21,20 @@ function sendData() {
   })
     .then((obj) => console.log(obj.json()))
     .catch((error) => console.log(error));
-    
+}
+
+function openIndex() {
+  window.open("./index.html", "_self");
+}
+
+function printSuccessMessage() {
+  document.getElementById("body").innerHTML = "Ačiū už užklausą!";
+  //openIndex();
 }
 
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData();
-  registrationForm.reset();
+  printSuccessMessage();
+  //openIndex();
 });

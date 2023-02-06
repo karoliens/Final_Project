@@ -21,9 +21,6 @@ namespace Final_Project.Models
         public ETypeOfService TypeOfService { get; set; }
         public string Description { get; set; }
 
-
-
-
         /*
         public Ticket? Client { get; set; }
         public int? ClientId { get; set; }
